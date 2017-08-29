@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <Readable>
+
+    <Text map="A2" id="S1A2" type="Sign" next="">Don't walk on the grass!</Text>
+    <Text map="A1" id="S1A1" type="Sign" next="S1A1P2">Do not walk on the farmland!</Text>
+    <Text map ="A1" id="S1A1P2" type="Sign" next="">The guilty will be held responsible!</Text>
+    <Text map="A2" id="S2A2" type="Sign" next="">Top rocks. Be aware of monsters! </Text>
+    <Text map="A4" id="S1A4" type="Sign" next="">An empty castle. There is nothing to see.</Text>
+    <Text map="A1" id="NPC1A1" type="NPC" next="NPC1A1P2">Are you venturing out in the wild?</Text>
+    <Text map="A1" id="NPC1A1P2" type="NPC" next="">Find a sword and I let you go.</Text>
+    <Text map ="A1" id="NPC1A1QC" type="NPC" next="">You seem to have a sword now. Be careful!</Text>
+
+
+    </Readable>

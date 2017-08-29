@@ -1,0 +1,18 @@
+Listaa tehtävistä grafiikoista:
+
+- hahmoja (Miehiä, naisia, vanhuksia, lapsia). Yksi pohja kullekin, vaatteilla variaatioita. Vaatteiksi esim pellavavaatteet, alkukantaisemmat nahkavaatteet ja joillekin voi hienompia vaatteita piirtää. Hahmot tehdään  6*4 ruudukkoon (4 vaakaa, 6 pystyä), joista jokainen ruutu on 32*32 pikselin kokoinen. Ensimmäiselle riville tulee kävelyanimaatio alas, toiselle riville tulee kävelyanimaatio ylös, kolmannelle kävelyanimaatio oikealle ja viimeiselle riville kävelyanimaatio vasemmalle. 
+
+- Pelin vihollisia voivat olla erinäköiset hämähäkit, käärmeet, luurangot sekä mieluusti yhden tai kahden tyyliset, hyvin mustasävyiset aaveet. Nämä voidaan tehdä 8*4 ruudukon kuvaan joista jokainen ruutu on 16*16 pikselin kokoinen. Jälleen animaatiot sijoitetaan siten, että rivillä 1 liikeanimaatio alas, rivillä 2 liike ylös, 3 rivillä liike oikealle ja 4 rivillä liike vasemmalle. Jäljelle jääneille riveille sijoitetaan hyökkäysanimaatiot liikeanimaatioita vastaavassa järjestyksessä.
+
+- Animoidut ympäristötiilet. Nämä tehdään 5*20 ruudukkoon, joista jokainen ruutu voi olla 32 *32 pikselin kokoinen. Yhdelle riville aina  4 - 5 kuvan animaatio kartalla liikkuvasta tiilestä. 
+Tarvitaan ainakin alas, ylös, oikealle ja vasemmalle virtaavaa jokea.
+Vesiputous tarvitaan. Putous kolmeen osaan: putouksen yläosa, keskiosa ja loppu. 
+Viiri- ja lippupohja tummemmilla väreillä tehty.
+Pieni tuulimylly puisilla lavoilla. Pienet lavat myllyyn
+Soihtu puinen versio ja metallinen versio.
+Takkatuli.
+laavaa.
+
+- Staattiset ympäristötiilet, puut erityisesti. 20*20 ruudukkoon, joista jokainen tiili 32*32 pikselin kokoinen. Myös muut kasvit olisi hyviä. Lasimaalaukset goottityyliin sekä linnarakenteita goottityyliin. Näiden ei tarvitse jäädä yhden ruudun kokoiseksi, jos osan luonne sitä vaatii.  Ornamentoidut pylväät ja patsaat. Riippusilta vasemmalta oikealle ja ylhäältä alas. Kivisilta, mattoja, tuoleja sekä rauta aitaa. Myös erilaiset talorakenteet, kivitalot, puutalot ja harjakatot edestä ja sivulta erilaisin materiaalein.
+
+-  Gimp ohjelmassa uuden projektin määrittäminen: Tiedosto => uusi. Kuvan kokoon leveys ja korkeus. Korkeusvalinnan kohdalla määritetään myös kuvassa käytettävä mittayksikkö. Tähän valitaan px. Lisäasetuksista valitaan Täytä kohtaan Läpinäkyvä. Sitten ok. Ruudukon määritys kuvaan tapahtuu yläpalkin valikosta Kuva => määritä ruudukko. Välistyskohtaan sekä leveyteen että korkeuteen joko haluttu 32 tai 16 pikseliä. Sitten ok ja ruudukon saa näkyviin kohdasta näytä => Näytä ruudukko.

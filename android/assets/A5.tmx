@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="OutsideTiles" tilewidth="32" tileheight="32">
+  <image source="terrainTiles.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="301" name="AnimatedTiles" tilewidth="32" tileheight="32">
+  <image source="AnimatedTiles.png" trans="ff00ff" width="160" height="640"/>
+  <tile id="5">
+   <animation>
+    <frame tileid="5" duration="500"/>
+    <frame tileid="6" duration="500"/>
+    <frame tileid="7" duration="500"/>
+    <frame tileid="8" duration="500"/>
+   </animation>
+  </tile>
+  <tile id="10">
+   <animation>
+    <frame tileid="10" duration="100"/>
+    <frame tileid="11" duration="100"/>
+    <frame tileid="12" duration="100"/>
+    <frame tileid="13" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="25">
+   <animation>
+    <frame tileid="25" duration="100"/>
+    <frame tileid="26" duration="100"/>
+    <frame tileid="27" duration="100"/>
+    <frame tileid="28" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="Base" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxTYGRgUBjFo3gUj+JRPKwwAAxHMFg=
+  </data>
+ </layer>
+ <layer name="Grass" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjALqgI9A/IlC/BmP+feAmI2ROvguDjuoZf5AYwDochSc
+  </data>
+ </layer>
+ <layer name="Tile Layer 8" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2D4gN1QTCuzsbFH7RgYO2Bm0zLOhzIAAAINCYA=
+  </data>
+ </layer>
+ <layer name="LowerBorder" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFowAV1Ay0AwYx2A3Fo3YMjB08NMZ8QKxAB2xCBwwADKIPtw==
+  </data>
+ </layer>
+ <layer name="MIDDLE ROCKS" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBg5IIRITAnIIBIPZjtqSMD0AveheNSOwWHHKBj8AAC2pBe1
+  </data>
+ </layer>
+ <layer name="Shade" width="25" height="15" opacity="0.22">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgF1ATCROJRO0bBKBgFtAQAH18COw==
+  </data>
+ </layer>
+ <layer name="LOWERROCKs" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAtSKOx+SCQPgjsyIDiWiLNy8QiVo3HXGRMjB3pOOzAZSYyriHBjkAkfggSxmUuDBML0qF6M5HY+MwmBxBrByWAHnaA0g8s7mBsbHgUjAwAAITGIiA=
+  </data>
+ </layer>
+ <layer name="Tile Layer 7" width="25" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxLZWBgCKYhBoFMIN4PxAcYaAdAdlzGIRcCxdSwA5u5QVB+BhXsCMRibiYSTQ07kEEmFprWdtRCMS3soLa52OygJaCHHbQMo1EweAAAn28Vmw==
+  </data>
+ </layer>
+ <objectgroup name="Boxes">
+  <object x="287" y="87" width="325" height="102"/>
+  <object x="227" y="93" width="68" height="92"/>
+  <object x="123" y="128" width="134" height="91"/>
+  <object x="1" y="154" width="159" height="96"/>
+  <object x="-3" y="-2" width="8" height="153"/>
+  <object x="1" y="-3" width="797" height="10"/>
+  <object x="796" y="8" width="6" height="113"/>
+  <object x="602" y="186" width="43" height="129"/>
+  <object x="702" y="187" width="96" height="132"/>
+  <object x="1" y="399" width="801" height="77"/>
+  <object x="161" y="216" width="56" height="191"/>
+  <object x="31" y="34" width="40" height="57"/>
+ </objectgroup>
+ <objectgroup name="Strint">
+  <object x="747" y="357">
+   <properties>
+    <property name="STR" value="1"/>
+   </properties>
+  </object>
+  <object x="748" y="157">
+   <properties>
+    <property name="STR" value="2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="TriggerLayer">
+  <object x="783" y="122" width="18" height="64">
+   <properties>
+    <property name="Door" value="A5:A6"/>
+   </properties>
+  </object>
+  <object x="782" y="319" width="20" height="80">
+   <properties>
+    <property name="Door" value="A5:A2"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

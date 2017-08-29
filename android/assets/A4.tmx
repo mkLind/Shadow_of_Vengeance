@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Outside" tilewidth="32" tileheight="32">
+  <image source="terrainTiles.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="301" name="AnimatedTiles" tilewidth="32" tileheight="32">
+  <image source="AnimatedTiles.png" trans="ff00ff" width="160" height="640"/>
+  <tile id="5">
+   <animation>
+    <frame tileid="5" duration="400"/>
+    <frame tileid="6" duration="400"/>
+    <frame tileid="7" duration="400"/>
+    <frame tileid="8" duration="400"/>
+   </animation>
+  </tile>
+  <tile id="10">
+   <animation>
+    <frame tileid="10" duration="100"/>
+    <frame tileid="11" duration="100"/>
+    <frame tileid="12" duration="100"/>
+    <frame tileid="13" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="25">
+   <animation>
+    <frame tileid="25" duration="100"/>
+    <frame tileid="26" duration="100"/>
+    <frame tileid="27" duration="100"/>
+    <frame tileid="28" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="Ground1" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxTYGRgUBjFo3gUj+IhgAH5Qiat
+  </data>
+ </layer>
+ <layer name="Ground2" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFwxl8guLPBNR9RFKLD7MxQjA7I37zWBkRaonB0gTMkwTKSxGBQWadJBgqxANC/iQVgNx3l8rmgTChOCMmbpHjd7BiACM1INg=
+  </data>
+ </layer>
+ <layer name="Ground3" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo4A0YMRIvDp0PApGASUAAM0wATM=
+  </data>
+ </layer>
+ <layer name="Rocks" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFMJANxYPVvFEwCkY6AADU8wGt
+  </data>
+ </layer>
+ <layer name="Shade" width="20" height="15" opacity="0.78">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFMCACxYPVvFEwCkY6AAAa3wBR
+  </data>
+ </layer>
+ <layer name="House" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYGBgaAPiPBJxOxbcwQABs4B4NhXwHBqZtw6Im7DgZiBuwSG3Hoh7kMzqBuINUPPWAPFMLHg6EM/AIYcNr2UYBaNgFOADANasNdA=
+  </data>
+ </layer>
+ <layer name="Roof" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFAwVmAfFsKJ4zCM1bB8TroXgDFcwrBOKZUFxEBfNGwcgDAFJ6Cao=
+  </data>
+ </layer>
+ <layer name="Roof1" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAfrAPi9Uh4AwVmwcAaIJ4GxGupYBYIFALxaiAuopJ5o2AUjIKBAwD8rAbp
+  </data>
+ </layer>
+ <layer name="Objects" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAu2D1qHhhMwcEmxjxsZq7AwSbWTHxi1A4TWoDHA+2AUTAoAACPzQnv
+  </data>
+ </layer>
+ <layer name="MapBorder" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFgwnwUNk8BSBWpJJZPFQ0Tx5qFrXMMwZiEyqaBwNDwTx+BkjcUAMrUBmbUBkDAFs1Cdw=
+  </data>
+ </layer>
+ <objectgroup name="Boxes">
+  <object x="-1" y="401" width="643" height="81"/>
+  <object x="1" y="0" width="41" height="397"/>
+  <object x="42" y="107" width="184" height="50"/>
+  <object x="315" y="106" width="177" height="59"/>
+  <object x="494" y="169" width="6" height="53"/>
+  <object x="496" y="211" width="98" height="40"/>
+  <object x="589" y="109" width="6" height="96"/>
+  <object x="599" y="108" width="30" height="56"/>
+  <object x="626" y="2" width="16" height="159"/>
+  <object x="225" y="103" width="96" height="21"/>
+  <object x="291.667" y="132.333" width="23" height="60"/>
+  <object x="190" y="130" width="29" height="56"/>
+  <object x="201" y="195" width="13" height="29"/>
+  <object x="43" y="157" width="9" height="56"/>
+  <object x="596" y="206" width="40" height="75"/>
+  <object x="324.333" y="263.333" width="22" height="10.3333"/>
+  <object x="294.333" y="190.667" width="16.6667" height="37.6667"/>
+ </objectgroup>
+ <objectgroup name="Strint">
+  <properties>
+   <property name="ID" value="SO1A4"/>
+   <property name="Item" value="Sword"/>
+  </properties>
+  <object x="571" y="331">
+   <properties>
+    <property name="STR" value="1"/>
+   </properties>
+  </object>
+  <object x="317.667" y="259.333" width="40" height="59.6667">
+   <properties>
+    <property name="Sign" value="S1A4"/>
+   </properties>
+  </object>
+  <object x="254" y="200">
+   <properties>
+    <property name="STR" value="2"/>
+   </properties>
+  </object>
+  <object x="116.667" y="188.667">
+   <properties>
+    <property name="Item" value="SO1A4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="TriggerLayer">
+  <object x="619" y="285" width="22" height="115">
+   <properties>
+    <property name="Door" value="A4:A1"/>
+   </properties>
+  </object>
+  <object x="230.667" y="146" width="56.6667" height="13.3333">
+   <properties>
+    <property name="Door" value="A4:INT3"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

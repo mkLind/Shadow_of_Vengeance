@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="15" height="10" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Ulkotilat" tilewidth="32" tileheight="32">
+  <image source="terrainTiles.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="301" name="sisätilat" tilewidth="32" tileheight="32">
+  <image source="SOWOBJECTSINDOORSxcf.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <layer name="floor" width="15" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxzYmRgcBrFo5jKGABUUCdD
+  </data>
+ </layer>
+ <layer name="walls" width="15" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAM6DOSjkcqGElhAABlEwMB
+  </data>
+ </layer>
+ <layer name="Ceiling" width="15" height="10">
+  <data encoding="base64" compression="zlib">
+   eJzLYmRgqCMDZwFxNhCTAzIHUC/I3WFQHE6COTC9MP/Xk6h3qIcVIYwOAOPNFE0=
+  </data>
+ </layer>
+ <layer name="objects" width="15" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAcRDFC6FwofRAJrwKKrUaTh4GVjKg0OtgHFN+PJPeUAjfi05uDw35CelcA9TUwQmhy9E4hYC+6OTA8GEE4kl9qgWwA1gMSPA==
+  </data>
+ </layer>
+ <objectgroup name="Boxes">
+  <object x="161" y="145" width="29" height="68"/>
+  <object x="98.5" y="64" width="27" height="31.5"/>
+  <object x="35" y="64.3333" width="27.3333" height="32"/>
+  <object x="31.6667" y="35" width="206.333" height="17.6667"/>
+  <object x="239" y="35" width="53" height="18.5"/>
+  <object x="292.5" y="35" width="53" height="27"/>
+  <object x="347" y="33" width="101" height="18.5"/>
+  <object x="449" y="31" width="28" height="289"/>
+  <object x="383" y="288" height="12"/>
+  <object x="379.5" y="287" height="9"/>
+  <object x="-0.666667" y="288" width="383.333" height="36"/>
+  <object x="-0.666667" y="31.3333" width="32" height="256.667"/>
+  <object x="32" y="124.667" width="93.3333" height="82.6667"/>
+  <object x="136.5" y="212.375" width="8.75" height="5"/>
+  <object x="136.125" y="180" width="9.875" height="5.125"/>
+  <object x="200.125" y="180" width="9.75" height="5.375"/>
+  <object x="421" y="66" width="17.5" height="121"/>
+  <object x="36" y="226.5" width="84.5" height="26"/>
+ </objectgroup>
+ <objectgroup name="TriggerLayer">
+  <object x="384.5" y="301.5" width="62.5" height="17">
+   <properties>
+    <property name="Door" value="INT1:A1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="Strint">
+  <properties>
+   <property name="STR" value="1"/>
+   <property name="strt1" value=""/>
+  </properties>
+  <object x="414.5" y="286.5">
+   <properties>
+    <property name="STR" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

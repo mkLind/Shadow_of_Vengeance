@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="13" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Outside" tilewidth="32" tileheight="32">
+  <image source="terrainTiles.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="301" name="AnimatedTiles" tilewidth="32" tileheight="32">
+  <image source="AnimatedTiles.png" trans="ff00ff" width="160" height="640"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="13" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxTYGRgUCABgwAp6kf1jOrJYIDgwainhgGCQQAAf1QZlQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="13" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxLZWBgCCaAkYECIwNDLQNpYFQPffWQCkB6QhiIw8h6MhiIwwOhp4aBOIysBwBd6x0l
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="13" height="15">
+  <data encoding="base64" compression="zlib">
+   eJyrYmBgqCKAg5FwGpocDCDz0eXSGUgHo3rop4cUEIKESQUZg1hPDRADAKPXDug=
+  </data>
+ </layer>
+ <objectgroup name="Boxes">
+  <object x="11" y="346.5" width="375" height="150.5"/>
+  <object x="-2" y="-5" width="15" height="286"/>
+  <object x="1" y="5" width="90" height="51"/>
+  <object x="164" y="-9" width="46" height="72"/>
+  <object x="257" y="-5" width="51" height="69"/>
+  <object x="90" y="-3" width="322.5" height="34"/>
+  <object x="394.5" y="34" width="19" height="252"/>
+ </objectgroup>
+ <objectgroup name="Strint">
+  <object x="40" y="315.5">
+   <properties>
+    <property name="STR" value="2"/>
+   </properties>
+  </object>
+  <object x="274" y="300" width="1"/>
+  <object x="353.5" y="317">
+   <properties>
+    <property name="STR" value="1"/>
+   </properties>
+  </object>
+  <object x="234.666" y="238">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="231.333" y="269.333">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="259.334" y="178">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="315.334" y="261.333">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="234" y="325.334">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="346.667" y="262">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="296" y="157.333">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="380" y="114.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="374" y="229.333">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="232" y="204">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="376" y="264.666">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="134" y="48">
+   <properties>
+    <property name="Item" value="MN10"/>
+   </properties>
+  </object>
+  <object x="232.666" y="296.666">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="356" y="86.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="323.333" y="82.0003">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="374.667" y="56.0003">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="337.333" y="48.0003">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="287.333" y="82.0003">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="236" y="55.3337">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="251.333" y="84.0003">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="206.667" y="84.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="176" y="84.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="156.667" y="111.334">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="157.333" y="140">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="146.667" y="170.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="40" y="262">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="66" y="264">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="96" y="262.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="38" y="230">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="36.6666" y="199.334">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="130.667" y="262.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="37.3333" y="168.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="36.6666" y="138.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="38" y="106.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="68" y="79.3337">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="115.333" y="169.334">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="71.3333" y="112">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+  <object x="72" y="228.667">
+   <properties>
+    <property name="Item" value="HZ4"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="TriggerLayer">
+  <object x="388" y="287.5" width="25" height="59">
+   <properties>
+    <property name="Door" value="A6:A2"/>
+   </properties>
+  </object>
+  <object x="-2" y="281" width="22" height="62">
+   <properties>
+    <property name="Door" value="A6:A5"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

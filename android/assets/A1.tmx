@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="20" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Ulkotilat" tilewidth="32" tileheight="32">
+  <image source="terrainTiles.png" trans="ff00ff" width="640" height="480"/>
+  <tile id="91">
+   <animation>
+    <frame tileid="91" duration="400"/>
+    <frame tileid="92" duration="400"/>
+    <frame tileid="93" duration="400"/>
+    <frame tileid="94" duration="400"/>
+   </animation>
+  </tile>
+  <tile id="111">
+   <animation>
+    <frame tileid="111" duration="400"/>
+    <frame tileid="112" duration="400"/>
+    <frame tileid="113" duration="400"/>
+    <frame tileid="114" duration="400"/>
+   </animation>
+  </tile>
+ </tileset>
+ <tileset firstgid="301" name="sisätilat" tilewidth="32" tileheight="32">
+  <image source="SOWOBJECTSINDOORSxcf.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="601" name="AnimatedTiles" tilewidth="32" tileheight="32">
+  <image source="AnimatedTiles.png" trans="ff00ff" width="160" height="640"/>
+  <tile id="0">
+   <animation>
+    <frame tileid="0" duration="400"/>
+    <frame tileid="1" duration="400"/>
+    <frame tileid="2" duration="400"/>
+    <frame tileid="3" duration="400"/>
+   </animation>
+  </tile>
+  <tile id="5">
+   <animation>
+    <frame tileid="5" duration="400"/>
+    <frame tileid="6" duration="400"/>
+    <frame tileid="7" duration="400"/>
+    <frame tileid="8" duration="400"/>
+   </animation>
+  </tile>
+  <tile id="10">
+   <animation>
+    <frame tileid="10" duration="100"/>
+    <frame tileid="11" duration="100"/>
+    <frame tileid="12" duration="100"/>
+    <frame tileid="13" duration="100"/>
+   </animation>
+  </tile>
+  <tile id="15">
+   <animation>
+    <frame tileid="15" duration="300"/>
+    <frame tileid="16" duration="300"/>
+    <frame tileid="17" duration="300"/>
+    <frame tileid="18" duration="300"/>
+   </animation>
+  </tile>
+  <tile id="20">
+   <animation>
+    <frame tileid="20" duration="300"/>
+    <frame tileid="21" duration="300"/>
+    <frame tileid="22" duration="300"/>
+    <frame tileid="23" duration="300"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="Ground1" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxTYGRgUBjFo3gUj+JhijlxYFqbT017Ru2gjj3UMn+wYgDREDyB
+  </data>
+ </layer>
+ <layer name="Ground2" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjY2RgYEPC7EAMAqxo4tTEw80OSTxqFAhgYu2A2SNFYzuQ7aK1Heh+otQOaRx24Aq/+wwQTGx8n8RvPFa7YHZIMaJiUsKIFKCAZMYpLH6jhh3oAFseu0uEvo9A/AkH/oyk7h4D7jj5jGEqdrfhCv+7BMyHYUJuw5Y2sIU/KRhmH6F4o1YZRw87cKUNYuKA3PBDDsfhjgHOwy1C
+  </data>
+ </layer>
+ <layer name="Rocks" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBj+II6JNPUhUEypHelAnIlFbTAUpyHJk+pGQnYQKz+Y7AhkwAx7GD8Iage54QSzIwMJZ+IQY6DAnmogrkHCtTjEKLFjuACQ/3HhUTAKRgHpAACIRBa5
+  </data>
+ </layer>
+ <layer name="MapBorder" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxTYGBgUEDCigwQII8mTilWBmITKDaF2mGMJEYuVsLidmoD5LDgp4MdIEwLvwxHO0DpyhSfYirYQY90NWrHqB3UtgO5rKWVHbQEMDt46GAHCPND7aI25mNALRNpiQFIHRRG
+  </data>
+ </layer>
+ <layer name="HouseWalls" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBjc4BgU09p8WtlzFIsdx4egHaNgFIyCUTAKBjcAALuXDe0=
+  </data>
+ </layer>
+ <layer name="HouseROOF" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAdXAPiV0B8HYhvAPFbIL5Jhjn4wCsofg3Eb6B2vKWBHf+Q+IyM1LfjHxYxkD2jYBSMglEwCkYBNQEA1uoOkg==
+  </data>
+ </layer>
+ <layer name="Roof2" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwVAHAAfQAAE=
+  </data>
+ </layer>
+ <layer name="houseADDONS" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFtAZX6WzfSzrbNwpGwSgYBaNg4AEA0p4Bvw==
+  </data>
+ </layer>
+ <layer name="Shading" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMApGwVAHAAfQAAE=
+  </data>
+ </layer>
+ <layer name="Objects" width="25" height="20">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA/eIJGD1UQx4TK3w/EB6hsB7qZl2lgz2UcYsj2PIVicgEuNyPbTakd2PyBDNDji1J1lAB62DESAKFwfAbEz3HgF2TaA0vLMPoXCeYQaw8sLcNofHb8AeLHBMx9hEMcOV8SsoNYgG4Xcr7kY2Rg4MeBBRhJsGQUYAUAlLgp0g==
+  </data>
+ </layer>
+ <objectgroup name="Boxes">
+  <object x="207" y="6" width="208" height="56"/>
+  <object x="610" y="22" width="156" height="47"/>
+  <object x="769" y="20" width="25" height="623"/>
+  <object x="0" y="592" width="778" height="58"/>
+  <object x="0" y="-2" width="41.3333" height="506"/>
+  <object x="53" y="123" width="32" height="114"/>
+  <object x="55" y="3" width="84" height="58"/>
+  <object x="143" y="0" width="5" height="20"/>
+  <object x="414" y="61" width="30" height="223"/>
+  <object x="447" y="160" width="26" height="62"/>
+  <object x="444" y="124" width="106.333" height="36.6667"/>
+  <object x="571" y="100" width="16" height="58"/>
+  <object x="585" y="62" width="22" height="63"/>
+  <object x="605" y="87" width="66" height="19"/>
+  <object x="445" y="221" width="71" height="66"/>
+  <object x="571" y="220" width="105" height="69"/>
+  <object x="664" y="102" width="13" height="122"/>
+  <object x="402.667" y="396.667" width="223.333" height="16"/>
+  <object x="622" y="446.667" width="4.66667" height="79.3333"/>
+  <object x="401.333" y="511.333" width="222" height="16"/>
+  <object x="398.667" y="398.667" width="8.66667" height="120.667"/>
+  <object x="322" y="414.667" width="30.6667" height="60.6667"/>
+  <object x="288.667" y="484" width="37.3333" height="54"/>
+  <object x="255.333" y="420.667" width="37.3333" height="60"/>
+  <object x="131.727" y="127.091" width="34.0455" height="126.455"/>
+  <object x="259" y="93.5" width="25" height="59.5"/>
+  <object x="295.5" y="127" width="23.5" height="62.5"/>
+  <object x="324" y="160" width="28.5" height="61.5"/>
+  <object x="96.7273" y="486.909" width="27.6364" height="19.8182"/>
+  <object x="163.091" y="521.455" width="25.0909" height="16.5455"/>
+  <object x="646" y="456" width="20" height="11"/>
+  <object x="178.333" y="13.3333" width="0.333333"/>
+  <object x="2" y="564.667" width="29.3333" height="24.6667"/>
+  <object x="194.667" y="46" width="27.6667" height="13.3333"/>
+  <object x="132.667" y="47.3333" width="25.3333" height="12.3333"/>
+ </objectgroup>
+ <objectgroup name="Strint" opacity="0.9">
+  <properties>
+   <property name="STR" value="2"/>
+   <property name="Sign" value="S1A1"/>
+  </properties>
+  <object x="551.667" y="192.667" width="17" height="7.33333">
+   <properties>
+    <property name="STR" value="2"/>
+   </properties>
+  </object>
+  <object x="531.333" y="339">
+   <properties>
+    <property name="STR" value="1"/>
+   </properties>
+  </object>
+  <object name="STR3" x="162" y="45.5" width="32" height="18">
+   <properties>
+    <property name="STR" value="3"/>
+   </properties>
+  </object>
+  <object x="643.125" y="454.75" width="24.875" height="50.25">
+   <properties>
+    <property name="Sign" value="S1A1"/>
+   </properties>
+  </object>
+  <object x="70.6667" y="536">
+   <properties>
+    <property name="STR" value="4"/>
+   </properties>
+  </object>
+  <object x="167.303" y="94.9697">
+   <properties>
+    <property name="NPC" value="NPC1A1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="TriggerLayer">
+  <properties>
+   <property name="Door" value="A1:INT1"/>
+  </properties>
+  <object name="Door" x="552.09" y="155.265" width="15.5078" height="10.9113" rotation="-0.37995">
+   <properties>
+    <property name="Door" value="A1:INT1"/>
+   </properties>
+  </object>
+  <object x="148.75" y="1.5" width="55.5" height="15.75">
+   <properties>
+    <property name="Door" value="A1:A2"/>
+   </properties>
+  </object>
+  <object x="0.666667" y="508.667" width="32" height="46.6667">
+   <properties>
+    <property name="Door" value="A1:A4"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

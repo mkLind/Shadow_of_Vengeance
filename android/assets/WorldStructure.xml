@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<maps>
+    <map name ="A1" type ="outside" initialPos ="STR1">
+
+        <gateway name="A1:INT1" dest="INT1" destStartPos="STR1"/>
+        <gateway name="A1:A2" dest="A2" destStartPos="STR1"/>
+        <gateway name="A1:A4" dest="A4" destStartPos="STR1"/>
+    </map>
+    <map name="INT1" type="inside" initialPos ="">
+        <gateway name="INT1:A1" dest="A1" destStartPos="STR2"/>
+    </map>
+    <map name="A2" type="outside" initialPos="">
+        <gateway name="A2:INT2" dest="INT2" destStartPos="STR1"/>
+        <gateway name="A2:A1" dest="A1" destStartPos="STR3"/>
+        <gateway name ="A2:A3" dest="A3" destStartPos="STR1"/>
+        <gateway name="A2:A6" dest="A6" destStartPos="STR1"/>
+        <gateway name ="A2:A5" dest="A5" destStartPos="STR1"/>
+    </map>
+    <map name ="INT2" type="inside" initialPos="">
+        <gateway name="INT2:A2" dest="A2" destStartPos="STR2"/>
+    </map>
+    <map name="A3" type="outside" initialPos="">
+        <gateway name ="A3:A2" dest="A2" destStartPos="STR3"/>
+        <gateway name ="A3:INT4" dest="INT4" destStartPos="STR1"/>
+    </map>
+    <map name="A4" type="outside" initialPos="">
+        <gateway name="A4:A1" dest="A1" destStartPos="STR4"/>
+        <gateway name="A4:INT3" dest="INT3" destStartPos="STR1"/>
+    </map>
+    <map name="A5"  type="outside" initialPos="">
+        <gateway name="A5:A6" dest="A6" destStartPos="STR2"/>
+        <gateway name="A5:A2" dest="A2" destStartPos="STR5"/>
+
+    </map>
+    <map name ="A6" type="outside" initialPos="">
+        <gateway name="A6:A5" dest="A5" destStartPos="STR2"/>
+        <gateway name="A6:A2" dest="A2" destStartPos="STR4"/>
+    </map>
+    <map name="INT3" type="inside" initialPos="">
+        <gateway name="INT3:A4" dest="A4" destStartPos="STR2"/>
+    </map>
+    <map name="INT4" type="inside" initialPos="">
+        <gateway name ="INT4:INT5" dest="INT5" destStartPos="STR1"/>
+        <gateway name ="INT4:A3" dest="A3" destStartPos="STR2"/>
+    </map>
+    <map name="INT5" type="inside" initialPos="">
+        <gateway name="INT5:INT4" dest="INT4" destStartPos="STR2"/>
+
+    </map>
+</maps>

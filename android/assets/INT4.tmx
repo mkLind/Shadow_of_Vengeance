@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="13" height="13" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Inside" tilewidth="32" tileheight="32">
+  <image source="SOWOBJECTSINDOORSxcf.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="301" name="outside" tilewidth="32" tileheight="32">
+  <image source="terrainTiles.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="601" name="AnimatedTiles" tilewidth="32" tileheight="32">
+  <image source="AnimatedTiles.png" trans="ff00ff" width="160" height="640"/>
+  <tile id="25">
+   <animation>
+    <frame tileid="25" duration="100"/>
+    <frame tileid="26" duration="100"/>
+    <frame tileid="27" duration="100"/>
+    <frame tileid="28" duration="100"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJyTZWBgMCQBywKxHBDbMxKPZUb1jOqB6pFF08MF5XMAaU4sGKQeAKhaJI0=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYCAPuJKAKdETSQIe1TM09HAiYWQzOBiwAwAj9Ckv
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYKAcFDHh5+MD9oxUcMAoGNYAAKt9ASk=
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYBhY4Mw0wA4YBYMeAACWVgBG
+  </data>
+ </layer>
+ <layer name="Tile Layer 5" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BwAwACpAAB
+  </data>
+ </layer>
+ <layer name="Tile Layer 6" width="13" height="13">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2BwAwACpAAB
+  </data>
+ </layer>
+ <objectgroup name="Boxes">
+  <object x="386.667" y="30.6667" width="28.6667" height="381.333"/>
+  <object x="224.667" y="382.667" width="190.667" height="35.3333"/>
+  <object x="-0.666667" y="382" width="159.333" height="43.3333"/>
+  <object x="-1.33333" y="28.6667" width="32" height="356"/>
+  <object x="30" y="29.3333" width="153.333" height="67.3333"/>
+  <object x="229.333" y="26.6667" width="163.333" height="67.3333"/>
+ </objectgroup>
+ <objectgroup name="Strint">
+  <properties>
+   <property name="Item" value="HZ2"/>
+  </properties>
+  <object x="192.667" y="352">
+   <properties>
+    <property name="STR" value="1"/>
+   </properties>
+  </object>
+  <object x="208.667" y="128.667">
+   <properties>
+    <property name="STR" value="2"/>
+   </properties>
+  </object>
+  <object x="142.667" y="362">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="142" y="330.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="240.667" y="330.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="242" y="358.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="242" y="358.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="170" y="240.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="234.667" y="243.333">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="199.333" y="242.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="266" y="242">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="295.333" y="264">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="318.667" y="240">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="295.333" y="214.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="170" y="215.333">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="52.6667" y="218">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="104" y="325.333">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="88.6667" y="294">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="82.6667" y="295.333" width="30">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="141.333" y="182">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="52.6667" y="247.333">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="58" y="182.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="105.333" y="116">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="73.3333" y="116.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="274.667" y="176.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="272.667" y="144.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="366.667" y="122">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+  <object x="366" y="144.667">
+   <properties>
+    <property name="Item" value="HZ2"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="TriggerLayer">
+  <object x="192" y="66.6667" width="34.6667" height="30.6667">
+   <properties>
+    <property name="Door" value="INT4:INT5"/>
+   </properties>
+  </object>
+  <object x="157.333" y="385.333" width="68.6667" height="28">
+   <properties>
+    <property name="Door" value="INT4:A3"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

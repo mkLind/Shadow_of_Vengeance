@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <Events>
+    <Event id="1" type ="COLLECT" map ="A1" condition="character:has:Sword" initiator="NPC1A1" RelatedID ="SO1A4" isRepeatable="false" Description="Find a sword">
+            <ResultingAction relatedQuestId="1" target= "NPC1A1" action="MOVE" additionX="64" additionY="0" other=""/>
+
+    </Event>
+</Events>

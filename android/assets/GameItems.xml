@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <GameItems>
+
+        <item id="SO1A4" name="Sword" type="INTERACTABLE" secundaryType ="COLLECTIBLE" amount="1" moneyAddition="0" healthAddition="0" texture="STRUP.png" animation="ChestAnimation.png" particle="">Just aregular sword</item>
+
+    <item id="HZ2" name ="hazard" type="HAZARD" secundaryType="" amount="" moneyAddition="0" healthAddition="0" texture="TestHazard.png" animation="" particle="">Hazard</item>
+    <item id="HZ3" name ="hazard" type="HAZARD" secundaryType="" amount="" moneyAddition="0" healthAddition="0" texture="TestHazard2.png" animation="" particle="">Hazard</item>
+    <item id="HZ4" name ="hazard" type="HAZARD" secundaryType="" amount="" moneyAddition="0" healthAddition="0" texture="TestHazard3.png" animation="" particle="">Hazard</item>
+
+    <item id="DR1" name="DOOR" type="DOOR" secundaryType="" amount="" moneyAddition="0" healthAddition="0" texture="" animation="DOOROPENANIMATION.png" particle=""> opening door</item>
+
+
+    <item id="MN1" name="Money" type="INTERACTABLE" secundaryType="COLLECTIBLE" amount="1" moneyAddition="1" healthAddition="0" texture="1Currency.png" animation="ChestAnimation.png" particle="">1 worth money</item>
+    <item id="MN5" name="Money" type="INTERACTABLE" secundaryType="COLLECTIBLE" amount="1" moneyAddition="5" healthAddition="0" texture="5Currency.png" animation="ChestAnimation.png" particle="">5 worth money</item>
+    <item id="MN10" name ="Money" type="INTERACTABLE" secundaryType="COLLECTIBLE" amount="1" moneyAddition="10" healthAddition="0" texture="10Currency.png" animation="ChestAnimation.png" particle="">10 worth money</item>
+</GameItems>

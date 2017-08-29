@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="20" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Inside" tilewidth="32" tileheight="32">
+  <image source="SOWOBJECTSINDOORSxcf.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="301" name="AnimatedTiles" tilewidth="32" tileheight="32">
+  <image source="AnimatedTiles.png" trans="ff00ff" width="160" height="640"/>
+  <tile id="25">
+   <animation>
+    <frame tileid="25" duration="100"/>
+    <frame tileid="26" duration="100"/>
+    <frame tileid="27" duration="100"/>
+    <frame tileid="28" duration="39"/>
+   </animation>
+  </tile>
+ </tileset>
+ <layer name="Tile Layer 1" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJzbysDAsHUUj+JRPIqHAAYA67bUHQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBj8YCGV8CgYBaNg6IIqIAYAWCALzQ==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJyrYmBgqKIy7qMSBplVzUA9UDlq3qAzDxTHaVCcjiSXiiSOjtMZsAOYeaRiXH4aNW9gzENOE8gYBACbBEvv
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBjawI2RgaEOSNdD2cSCUCAOA+JwNDYITALiyVB2LRDroGE9KCbWPHJAJpTORhLLxqZwhIIaIHaA4hoqmRcCxdQyLwOKqWHeKIAAAHmtDmE=
+  </data>
+ </layer>
+ <objectgroup name="Boxes">
+  <object x="7" y="315" width="439" height="163"/>
+  <object x="0" y="258" width="120" height="55"/>
+  <object x="193" y="261" width="250" height="50"/>
+  <object x="0" y="-1" width="293" height="91"/>
+  <object x="338" y="2" width="295" height="97"/>
+  <object x="294" y="85" width="44" height="18"/>
+  <object x="383" y="94" width="255" height="36"/>
+  <object x="605" y="134" width="35" height="344"/>
+  <object x="447" y="450" width="159" height="24"/>
+  <object x="118.5" y="159.5" width="1.625" height="5.25"/>
+  <object x="64" y="93.5" width="192.5" height="63.5"/>
+  <object x="0" y="90" width="30" height="167"/>
+  <object x="480" y="271.333" width="64" height="61.6667"/>
+  <object x="456.875" y="340.125" width="7.75" height="5.625"/>
+  <object x="456.75" y="308.125" width="8.25" height="4.75"/>
+  <object x="458.125" y="275.5" width="6.125" height="6.5"/>
+  <object x="553.875" y="275" width="7.125" height="7"/>
+  <object x="553.75" y="306.625" width="6.5" height="8"/>
+  <object x="554.125" y="338.625" width="5.75" height="8.125"/>
+ </objectgroup>
+ <objectgroup name="Strint">
+  <object x="157" y="250">
+   <properties>
+    <property name="STR" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="TriggerLayer">
+  <object x="122" y="284" width="71" height="30">
+   <properties>
+    <property name="Door" value="INT3:A4"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

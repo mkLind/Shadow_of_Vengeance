@@ -1,0 +1,7 @@
+﻿Event käsitteen hahmottelua:
+Event tyypit;
+		Passiiviset
+	- Avaaminen/sulkeminen: Annetaan/Evätään pääsy pelaajalle tietylle alueelle
+	- Lisääminen/poistaminen kartalle: lisätään/poistetaan määrätylle kartalle joko hirviöitä tai hyödyllisiä esineitä
+	- aktivaatio/deaktivaatio: Aktivoidaan jokin muu olemassa oleva Event. 
+	

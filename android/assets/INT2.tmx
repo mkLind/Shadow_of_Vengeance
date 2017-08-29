@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="25" height="30" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="Inside" tilewidth="32" tileheight="32">
+  <image source="SOWOBJECTSINDOORSxcf.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <tileset firstgid="301" name="Outside" tilewidth="32" tileheight="32">
+  <image source="terrainTiles.png" trans="ff00ff" width="640" height="480"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="25" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztwzEJAAAMA7AyT/VvrTZ2JJBeUlVV9fUBorehIw==
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="25" height="30">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMAooA1MYUTEtwApGVExrMHkY2YEeP8RgUsByRsz4IQaPglEwCkgDANc7F4M=
+  </data>
+ </layer>
+ <layer name="Tile Layer 3" width="25" height="30">
+  <data encoding="base64" compression="zlib">
+   eJyzY2BgsBvFo3gUj+JRPGxxEBqmtvn2DJjAdtQOou0IZMCMI0KYVDvIAfj8PmrHqB2jduDPh1p4MAzgU6OFw1wAeWyMYw==
+  </data>
+ </layer>
+ <layer name="Tile Layer 4" width="25" height="30">
+  <data encoding="base64" compression="zlib">
+   eJztyzENAAAMA6D6qX9/FbHsg58EAAD41uMfFngALA==
+  </data>
+ </layer>
+ <objectgroup name="Boxes">
+  <object x="223" y="514" width="418" height="123"/>
+  <object x="80" y="455" width="154" height="58"/>
+  <object x="7" y="509" width="88" height="420"/>
+  <object x="645" y="636" width="93" height="301"/>
+  <object x="387" y="931" width="260" height="31"/>
+  <object x="92" y="923" width="230" height="50"/>
+  <object x="227" y="639" width="412" height="63"/>
+  <object x="96" y="516" width="127" height="57"/>
+ </objectgroup>
+ <objectgroup name="Strint">
+  <object x="326" y="866" width="60" height="28">
+   <properties>
+    <property name="STR" value="1"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup name="TriggerLayer">
+  <properties>
+   <property name="Door" value="INT2:A2"/>
+  </properties>
+  <object x="323" y="923" width="64" height="37">
+   <properties>
+    <property name="Door" value="INT2:A2"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
