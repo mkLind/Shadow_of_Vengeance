@@ -21,14 +21,16 @@ public class LoadingScreen implements Screen {
     private targetScreen screen;
     private Label status;
     private Stage stage;
+    private int stateTime;
 
     public LoadingScreen(final Core game, targetScreen screen) {
         this.game = game;
         game.getLoader().queueAssets(screen);
         this.screen = screen;
-        status = new UiElements(game.getLoader().getManager()).getLabel(50,Gdx.graphics.getHeight()-90,Gdx.graphics.getWidth()-50,100,3f,"",game.font, Color.WHITE);
-        Stage stage = new Stage();
+        status = new UiElements(game.getLoader().getManager()).getLabel(300,0,Gdx.graphics.getWidth()-50,500,10f,"",game.font, Color.GREEN);
+       stage = new Stage();
         stage.addActor(status);
+        stateTime = 0;
     }
 
     public enum targetScreen {
@@ -44,12 +46,14 @@ public class LoadingScreen implements Screen {
                 game.setScreen(new GameLoop(game));
             }
         } else {
-stage.act(delta);
+            status.setText("Loading: " + MathUtils.round((game.getLoader().getManager().getProgress()) * 100) + "%");
+            stage.act(stateTime);
             stage.draw();
-status.setText("Loading: " + MathUtils.round((game.getLoader().getManager().getProgress()) * 100) + "%");
-            
+
+
 
         }
+        stateTime += delta;
     }
 
     public void dispose() {

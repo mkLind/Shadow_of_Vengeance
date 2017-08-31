@@ -585,7 +585,7 @@ public class GameLoop implements Screen {
 
 
                             }
-                            setMonsterDirection(i,currentLevelMonsters);
+                           // setMonsterDirection(i,currentLevelMonsters);
                         } else {
 
                             // Update XY COORDINATES BASED ON VEL CHANGES BEFORE
