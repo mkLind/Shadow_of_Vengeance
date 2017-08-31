@@ -1634,7 +1634,7 @@ resolveOverlaps(currentLevelMonsters);
             mapItems.addAll(level.getItems());
           for(int i = 0; i<mapItems.size();i++){
               if(monitor.isItemRelatedToQuest(mapItems.get(i).getId())) {
-                  if (monitor.checkIfFinished(character, mapItems.get(i).getId())) {
+                  if (monitor.checkIfFinished(character, mapItems.get(i).getId()) ||character.checkItemById(mapItems.get(i).getId())) {
                       mapItems.remove(i);
                   }
               }

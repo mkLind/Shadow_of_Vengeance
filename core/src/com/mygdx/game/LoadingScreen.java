@@ -3,8 +3,11 @@ package com.mygdx.game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.scenes.scene2d.Stage;
+import com.badlogic.gdx.scenes.scene2d.ui.Label;
 
 /**
  * Created by Markus on 20.7.2017.
@@ -16,13 +19,16 @@ public class LoadingScreen implements Screen {
 
     private AssetManager manager;
     private targetScreen screen;
+    private Label status;
+    private Stage stage;
 
     public LoadingScreen(final Core game, targetScreen screen) {
         this.game = game;
         game.getLoader().queueAssets(screen);
         this.screen = screen;
-
-
+        status = new UiElements(game.getLoader().getManager()).getLabel(50,Gdx.graphics.getHeight()-90,Gdx.graphics.getWidth()-50,100,3f,"",game.font, Color.WHITE);
+        Stage stage = new Stage();
+        stage.addActor(status);
     }
 
     public enum targetScreen {
@@ -38,12 +44,10 @@ public class LoadingScreen implements Screen {
                 game.setScreen(new GameLoop(game));
             }
         } else {
-
-
-            game.font.setColor(com.badlogic.gdx.graphics.Color.GREEN);
-            game.batch.begin();
-            game.font.draw(game.batch, "Loading: " + MathUtils.round((game.getLoader().getManager().getProgress()) * 100) + "%", Gdx.graphics.getWidth() * 0.05f, Gdx.graphics.getHeight() * 0.6f);
-            game.batch.end();
+stage.act(delta);
+            stage.draw();
+status.setText("Loading: " + MathUtils.round((game.getLoader().getManager().getProgress()) * 100) + "%");
+            
 
         }
     }
