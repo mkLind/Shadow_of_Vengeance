@@ -663,9 +663,11 @@ public class GameLoop implements Screen {
                         // monster attacks character
 
                         if (currentLevelMonsters.get(i).isAttacking()) {
+
                             if (currentLevelMonsters.get(i).getDirection() == Monster.dirStatus.UP) {
                                 if (detector.hitDetectedUp(currentLevelMonsters.get(i), character) && !character.isHurt() && character.getHitCounter() < 1) {
                                     //  hitSound.play();
+                                    Gdx.app.error("GAMELOOP","CHARACTER ATTACKED BY MONSTER AT INDEX: " + i + " FROM BELOW");
                                     if (character.getDefense() > currentLevelMonsters.get(i).getStrength()) {
                                         character.setHP(character.getHP() - 1);
                                     } else {
@@ -679,10 +681,12 @@ public class GameLoop implements Screen {
                                     currentLevelMonsters.get(i).setIsAttacking(false);
                                     currentLevelMonsters.get(i).setHitCounter(currentLevelMonsters.get(i).getHitCounter() + 1);
                                 }
+                                HPtext.setText("HP: " + character.getHP() +"/" + character.getHpFull());
                             }
                             if (currentLevelMonsters.get(i).getDirection() == Monster.dirStatus.DOWN) {
                                 if (detector.hitDetectedDown(currentLevelMonsters.get(i), character) && !character.isHurt() && character.getHitCounter() < 1) {
                                     //  hitSound.play();
+                                    Gdx.app.error("GAMELOOP","CHARACTER ATTACKED BY MONSTER AT INDEX: " + i + " FROM BELOW");
                                     if (character.getDefense() > currentLevelMonsters.get(i).getStrength()) {
                                         character.setHP(character.getHP() - 1);
                                     } else {
@@ -696,11 +700,13 @@ public class GameLoop implements Screen {
                                     currentLevelMonsters.get(i).setHitCounter(currentLevelMonsters.get(i).getHitCounter() + 1);
 
                                 }
+                                HPtext.setText("HP: " + character.getHP() +"/" + character.getHpFull());
                             }
 
                             if (currentLevelMonsters.get(i).getDirection() == Monster.dirStatus.LEFT) {
                                 if (detector.hitDetectedLeft(currentLevelMonsters.get(i), character) && !character.isHurt() && character.getHitCounter() < 1) {
                                     //  hitSound.play();
+                                    Gdx.app.error("GAMELOOP","CHARACTER ATTACKED BY MONSTER AT INDEX: " + i + " FROM RIGHT");
                                     if (character.getDefense() > currentLevelMonsters.get(i).getStrength()) {
                                         character.setHP(character.getHP() - 1);
                                     } else {
@@ -715,10 +721,12 @@ public class GameLoop implements Screen {
                                     currentLevelMonsters.get(i).setHitCounter(currentLevelMonsters.get(i).getHitCounter() + 1);
 
                                 }
+                                HPtext.setText("HP: " + character.getHP() +"/" + character.getHpFull());
                             }
                             if (currentLevelMonsters.get(i).getDirection() == Monster.dirStatus.RIGHT) {
                                 if (detector.hitDetectedRight(currentLevelMonsters.get(i), character) && !character.isHurt() && character.getHitCounter() < 1) {
                                   //  hitSound.play();
+                                    Gdx.app.error("GAMELOOP","CHARACTER ATTACKED BY MONSTER AT INDEX: " + i + " FROM LEFT");
                                     if (character.getDefense() > currentLevelMonsters.get(i).getStrength()) {
                                         character.setHP(character.getHP() - 1);
                                     } else {
@@ -732,6 +740,7 @@ public class GameLoop implements Screen {
                                     currentLevelMonsters.get(i).setHitCounter(currentLevelMonsters.get(i).getHitCounter() + 1);
                                     character.setHitCounter(1);
                                 }
+                                HPtext.setText("HP: " + character.getHP() +"/" + character.getHpFull());
                             }
 
                             if (character.getHP() <= 0) {
@@ -938,7 +947,7 @@ public class GameLoop implements Screen {
 
             } else if (!character.isAttacking() && character.getHP() > 0) {
                 character.setIsHurt(false);
-
+                character.setHitCounter(0);
                 character.setX(character.getX() + pad.getKnobPercentX() * character.getDexterity());
                 character.setY(character.getY() + pad.getKnobPercentY() * character.getDexterity());
 
