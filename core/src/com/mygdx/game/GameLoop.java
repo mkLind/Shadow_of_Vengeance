@@ -267,7 +267,8 @@ public class GameLoop implements Screen {
                character.addQuest( monitor.activateQuest());
                 Gdx.app.error("SECUNDARY ACTION","QUEST ACTIVATED " + "\n" + "QUEST LIST SIZE: " +character.getQuestlist().size() + "\n"
                 + "Quest initiator: " + character.getQuestlist().get(0).getInitiator());
-            }else if(!monitor.getqList().isEmpty()){
+            }
+            if(!monitor.getqList().isEmpty()){
 
                 for(int i = 0; i<monitor.getqList().size();i++){
                     if(monitor.isQuestFinished(character,monitor.getqList().get(i).getInitiator())){
@@ -416,20 +417,33 @@ public class GameLoop implements Screen {
              if(!character.hasQuest(npcList.get(j).getId())) {
                  Gdx.app.error("CHARACTER HAS NO QUESTS","CHARACTER HAS NO QUESTS");
                  lastTextId = npcList.get(j).getId();
+                 if(monitor.checkIfFinished(character,npcList.get(j).getId())){
+                     lastTextId = npcList.get(j).getId() + "QC";
+                 }
              }else{
                  Gdx.app.error("CHARACTER HAS QUESTS","QUEST WITH ID: " + npcList.get(j).getId() +"\n" );
-                 if(monitor.isQuestFinished(character,npcList.get(j).getId())){
 
-                     lastTextId = npcList.get(j).getId() + "QC";
-                 }else{
-                     lastTextId = npcList.get(j).getId();
-                 }
+
+
+
+
+
+                     if (monitor.isQuestFinished(character, npcList.get(j).getId())) {
+
+                         lastTextId = npcList.get(j).getId() + "QC";
+                     } else {
+                         lastTextId = npcList.get(j).getId();
+                     }
 
              }
 
                         // Check if npc provides a quest
                        if(monitor.questExists(npcList.get(j).getId()) && !character.hasQuest(npcList.get(j).getId())){
                            monitor.setCurrentActivator(npcList.get(j).getId());
+
+
+
+
                        }
 
 

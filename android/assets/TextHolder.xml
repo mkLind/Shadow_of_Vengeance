@@ -7,8 +7,8 @@
     <Text map="A2" id="S2A2" type="Sign" next="">Top rocks. Be aware of monsters! </Text>
     <Text map="A4" id="S1A4" type="Sign" next="">An empty castle. There is nothing to see.</Text>
     <Text map="A1" id="NPC1A1" type="NPC" next="NPC1A1P2">Are you venturing out in the wild?</Text>
-    <Text map="A1" id="NPC1A1P2" type="NPC" next="">Find a sword and I let you go.</Text>
-    <Text map ="A1" id="NPC1A1QC" type="NPC" next="">You seem to have a sword now. Be careful!</Text>
+    <Text map="A1" id="NPC1A1P2" type="NPC" next="">I can't let you go if you have nothing to protect yourself with.</Text>
+    <Text map ="A1" id="NPC1A1QC" type="NPC" next="">It seems that you'll be fine out there. You can go.</Text>
 
 
     </Readable>

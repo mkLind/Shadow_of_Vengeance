@@ -68,19 +68,22 @@ Gdx.app.error("QUEST FINISHED: ","" +  finished + "\n");
 
     public boolean checkIfFinished(Character c, String RelatedId){
         boolean finished = false;
-        XmlReader.Element elem = null;
-        for(int i = 0; i<QuestList.size;i++){
-            if(QuestList.get(i).getAttribute("RelatedID").equals(RelatedId)){
-                elem = QuestList.get(i);
 
+        for(int i = 0; i<QuestList.size;i++){
+   
+            if(QuestList.get(i).getAttribute("initiator").equals(RelatedId)){
+
+                XmlReader.Element  elem = QuestList.get(i);
+                String[] condition = elem.getAttribute("condition").split(":");
+                if(c.hasItem(condition[2])){
+                    finished = true;
+
+                }
             }
 
         }
-        String[] condition = elem.getAttribute("condition").split(":");
-        if(c.hasItem(condition[2])){
-            finished = true;
+        Gdx.app.error("CHECKIFFINISHED","FINISHED: " + finished);
 
-        }
         return finished;
     }
 
