@@ -70,14 +70,19 @@ Gdx.app.error("QUEST FINISHED: ","" +  finished + "\n");
         boolean finished = false;
 
         for(int i = 0; i<QuestList.size;i++){
-   
+
             if(QuestList.get(i).getAttribute("initiator").equals(RelatedId)){
 
                 XmlReader.Element  elem = QuestList.get(i);
                 String[] condition = elem.getAttribute("condition").split(":");
-                if(c.hasItem(condition[2])){
-                    finished = true;
+                if(condition.length == 3) {
+                    if (c.hasItem(condition[2])) {
+                        finished = true;
 
+                    }
+                }
+                if(condition.length == 4){
+                    
                 }
             }
 

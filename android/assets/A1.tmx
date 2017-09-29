@@ -112,7 +112,7 @@
  </layer>
  <layer name="Objects" width="25" height="20">
   <data encoding="base64" compression="zlib">
-   eJxjYKA/eIJGD1UQx4TK3w/EB6hsB7qZl2lgz2UcYsj2PIVicgEuNyPbTakd2PyBDNDji1J1lAB62DESAKFwfAbEz3HgF2TaA0vLMPoXCeYQaw8sLcNofHb8AeLHBMx9hEMcOV8SsoNYgG4Xcr7kY2Rg4MeBBRhJsGQUYAUAlLgp0g==
+   eJxjYKA/eIJGD1UQx4TK3w/EB6hsB7qZl2lgz2UcYsj2PIVicgEuNyPbTakd2PyBDNDji1J1lAB62DESAKFwfAbEz3HgF2TaA0vLMPoXCeYQaw8sLcNofHb8AeLHBMx9hEMcOV8SsoNYgG4Xcr6klh34AB8jAwM/DizASCVLBikAAPmGK8g=
   </data>
  </layer>
  <objectgroup name="Boxes">
@@ -134,9 +134,9 @@
   <object x="571" y="220" width="105" height="69"/>
   <object x="664" y="102" width="13" height="122"/>
   <object x="402.667" y="396.667" width="223.333" height="16"/>
-  <object x="622" y="446.667" width="4.66667" height="79.3333"/>
-  <object x="401.333" y="511.333" width="222" height="16"/>
-  <object x="398.667" y="398.667" width="8.66667" height="120.667"/>
+  <object x="622" y="446.667" width="5" height="114"/>
+  <object x="402" y="552.333" width="222" height="16"/>
+  <object x="398.667" y="398.667" width="6.33334" height="160.667"/>
   <object x="322" y="414.667" width="30.6667" height="60.6667"/>
   <object x="288.667" y="484" width="37.3333" height="54"/>
   <object x="255.333" y="420.667" width="37.3333" height="60"/>
