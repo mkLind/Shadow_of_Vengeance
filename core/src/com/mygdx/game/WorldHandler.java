@@ -144,6 +144,7 @@ items = new Array<XmlReader.Element>();
         return l;
 
     }
+    // returns where a gateway leads the character. Map id.
     public String getGatewayDestination(String gatewayName){
 
         String dest= "";
@@ -160,6 +161,7 @@ items = new Array<XmlReader.Element>();
         return dest;
 
     }
+    // Gets the character initial position on a map
     public String getStartingPosition(String gatewayName){
         String dest= "";
 

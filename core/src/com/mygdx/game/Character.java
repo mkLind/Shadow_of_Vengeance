@@ -126,6 +126,7 @@ public enum locationStatus{
     public void addQuest(Event quest){
         questlist.add(quest);
     }
+    // fetches a quest based on its id.
     public Event getQuestById(String id){
         Event q = null;
         if(!questlist.isEmpty()){

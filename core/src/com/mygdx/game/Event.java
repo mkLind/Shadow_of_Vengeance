@@ -4,6 +4,7 @@ import com.sun.org.apache.regexp.internal.RE;
 
 /**
  * Created by Markus on 4.8.2017.
+ * Event relating to a quest.
  */
 
 public class Event {

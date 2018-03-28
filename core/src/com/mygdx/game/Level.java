@@ -17,6 +17,7 @@ import java.util.HashMap;
 
 /**
  * Created by Markus on 19.7.2017.
+ * initializes level. includes everything that goes into a level.
  */
 
 public class Level {

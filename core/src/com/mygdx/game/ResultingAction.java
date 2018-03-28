@@ -2,6 +2,7 @@ package com.mygdx.game;
 
 /**
  * Created by Markus on 16.8.2017.
+ * Class for  representing something that will happen after completed quest
  */
 
 public class ResultingAction {

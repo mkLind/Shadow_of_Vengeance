@@ -27,6 +27,7 @@ public class EventMonitor {
         ResultingActionList = new Array<XmlReader.Element>();
         qList = new ArrayList<Event>();
         reader = new XmlReader();
+        // get the Event xml and parse its contets.
         FileHandle handle = Gdx.files.internal("EventHolder.xml");
         XmlReader.Element ele = null;
         try {
@@ -54,6 +55,7 @@ Gdx.app.error("CHECKING IF QUEST FINISHED","\n");
             }
 
             String[] condition = q.getCondition().split(":");
+            // Check if character has a quest that has end condition met
 
 
             if (c.hasItem(condition[2])) {
@@ -142,6 +144,7 @@ Gdx.app.error("QUEST FINISHED: ","" +  finished + "\n");
         return qList.get(qList.size()-1);
 
     }
+    // activates quest and store it in event monitor.
     public Event activateQuest(){
         for(int i = 0; i<QuestList.size;i++){
             if(CurrentActivator.equals(QuestList.get(i).getAttribute("initiator"))){

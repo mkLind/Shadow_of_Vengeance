@@ -142,6 +142,7 @@ public class GameLoop implements Screen {
                     actionsDone++;
 
                 }
+                // Different actions based on character location
                 if(character.getLocStat().equals(Character.locationStatus.ITEMPROXIMITY)){
 
 
@@ -282,7 +283,7 @@ public class GameLoop implements Screen {
 
                         }
                         if(action.getType().equals(ResultingAction.ActionType.MOVE)){
-
+                            // move here everything that has to be moved based on resulting action
                             if(monitor.getqList().get(i).getInitiator().contains("NPC") && !npcList.isEmpty()){
 
                           for(int j = 0; j<npcList.size();j++) {
@@ -485,7 +486,7 @@ public class GameLoop implements Screen {
                         break;
 
                     }else if(mapItems.get(i).getType().equals(Item.ItemType.HAZARD )&&detector.isColliding(character.getBounds(),mapItems.get(i).getBounds())){
-
+                        // interactions with hazards
                     if(character.getDirection() == Character.dirStatus.DOWN){
 
                         character.setHitCounter(1);
@@ -769,9 +770,9 @@ public class GameLoop implements Screen {
 
 
                         // character attacks monster
-                        // HOXHOX
-                        if (character.isAttacking()) {
 
+                        if (character.isAttacking()) {
+                            // attack in the direction the characteris facing
                             if (character.getDirection() == Character.dirStatus.UP) {
                                 if (detector.hitDetectedUp(character, currentLevelMonsters.get(i)) && !currentLevelMonsters.get(i).isHurt() && !currentLevelMonsters.get(i).isSpawning() && currentLevelMonsters.get(i).getHitCounter() < 1) {
 
@@ -1128,7 +1129,7 @@ public class GameLoop implements Screen {
 
 
             }
-            // NPC Törmäilyt
+            // NPC collisions
             if(!npcList.isEmpty()){
                 for(int i = 0; i<npcList.size();i++){
                     if(detector.isColliding(character.getBounds(),npcList.get(i).getBounds())){
@@ -1310,6 +1311,7 @@ resolveOverlaps(currentLevelMonsters);
             stage.act(delta);
             stage.draw();
         }// gameState.RUNNING END
+        // Used for example displaying text
         if(state == gameState.SECUNDARYACTION){
 
             Gdx.app.error(" STATE IS SECUNDARYACTION ","");
@@ -1504,7 +1506,7 @@ resolveOverlaps(currentLevelMonsters);
             }
                 //  game.batch.draw(getTextBase(), 280,Gdx.graphics.getHeight()-520,Gdx.graphics.getWidth()-300,110);
 
-
+            // draw text one letter at a time
             if(!tmp.equals(text.getText().toString())) {
 
                 text.setText(text.getText()+""+TextHandler.getLetterByIndex(TextPointer,tmp));
@@ -1632,12 +1634,14 @@ resolveOverlaps(currentLevelMonsters);
     }
 
     public void switchMap(String name,String coordinateTag){
+        // reset camera
         aspectratio = (float) Gdx.graphics.getWidth() / (float) Gdx.graphics.getHeight();
         camera = new OrthographicCamera();
         camera.setToOrtho(false, 220f * aspectratio, 220f);
+
         Interactables = new Array<RectangleMapObject>();
         mapItems = new ArrayList<Item>();
-
+        // load new level.
         level = handler.getLevelByName(name);
         Gdx.app.error("SWITCH MAP","CHANGING TO LEVEL: " + level.getMapName() +"\n");
 

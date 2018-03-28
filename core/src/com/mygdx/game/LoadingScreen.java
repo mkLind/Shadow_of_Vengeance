@@ -11,6 +11,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.Label;
 
 /**
  * Created by Markus on 20.7.2017.
+ * displays loading screen
  */
 
 public class LoadingScreen implements Screen {

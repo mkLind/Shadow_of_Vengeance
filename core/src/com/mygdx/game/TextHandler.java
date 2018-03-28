@@ -45,7 +45,7 @@ public class TextHandler {
         }
         return tekstit;
     }
-
+        // fetches text that is related to text. returns text id.
     public ArrayList<String> getRelatedTexts(String firstId){
        ArrayList<String> consecTexts = new ArrayList<String>();
         String id = firstId;
@@ -70,6 +70,7 @@ public String getTextTypeById(String id){
     }
     return type;
 }
+// get one letter from the text
 public static String getLetterByIndex(int index, String word){
 
     String[] tmp = word.split("");

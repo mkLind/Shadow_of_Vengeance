@@ -76,7 +76,7 @@ public class NPC extends Cinfo {
         UP, DOWN, LEFT, RIGHT
 
     }
-
+// Target coordinates for autonomous movement
     public void setTargetCoordinates(float targX, float targY){
         this.targX = targX;
         this.targY = targY;
@@ -120,6 +120,7 @@ public class NPC extends Cinfo {
             yVel = 0f;
         }
     }
+    // move character to target if its Collider rectangle does not include target coordinates.
 public boolean moveToTarget(float currX, float currY){
      boolean atTarget = false;
     if(super.getBounds().contains(targX,targY)){
