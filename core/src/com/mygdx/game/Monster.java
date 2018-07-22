@@ -1,7 +1,10 @@
 package com.mygdx.game;
 
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.TimeUtils;
@@ -13,7 +16,7 @@ import com.badlogic.gdx.utils.TimeUtils;
  * Created by Markus on 31.1.2016.
  */
 
-public class Monster extends Cinfo {
+public class Monster extends Cinfo implements Drawable{
 
     private int ID;
     private float MonsterType;
@@ -195,7 +198,54 @@ public class Monster extends Cinfo {
         UP, DOWN, LEFT, RIGHT
 
     }
+public void draw(SpriteBatch batch, float stateTime){
 
+
+    if (isHurt()) {
+        batch.setColor(Color.RED);
+    } else {
+        batch.setColor(Color.WHITE);
+    }
+
+
+    if (isDirDown()) {
+        if (isAttacking()) {
+            batch.draw((TextureRegion) getAttackDown().getKeyFrame(stateTime, true), getX(), getY(), getWidth(), getHeight());
+
+        } else {
+            batch.draw((TextureRegion) getDownRun().getKeyFrame(stateTime, true), getX(), getY(), getWidth(), getHeight());
+
+        }
+    } else if (isDirUp()) {
+        if (isAttacking()) {
+           batch.draw((TextureRegion)getAttackUp().getKeyFrame(stateTime, true), getX(),getY(), getWidth(), getHeight());
+
+        } else {
+         batch.draw((TextureRegion)getUpRun().getKeyFrame(stateTime, true), getX(), getY(), getWidth(), getHeight());
+
+        }
+    } else if (isDirRight()) {
+        if (isAttacking()) {
+            batch.draw((TextureRegion) getAttackRight().getKeyFrame(stateTime, true), getX(), getY(), getWidth(), getHeight());
+
+        } else {
+           batch.draw((TextureRegion)getRightRun().getKeyFrame(stateTime, true), getX(), getY(), getWidth(), getHeight());
+
+        }
+    } else if (isDirLeft()) {
+        if (isAttacking()) {
+           batch.draw((TextureRegion)getAttackLeft().getKeyFrame(stateTime, true), getX(), getY(), getWidth(), getHeight());
+
+        } else {
+           batch.draw((TextureRegion) getLeftRun().getKeyFrame(stateTime, true), getX(), getY(), getWidth(), getHeight());
+
+        }
+
+    } else if (!isDirectionSet()) {
+        batch.draw((TextureRegion) getDownRun().getKeyFrame(stateTime, true), getX(), getY(), getWidth(), getHeight());
+
+    }
+}
 
     public long getDamageTaken() {
         return damageTaken;

@@ -997,125 +997,8 @@ public class GameLoop implements Screen {
 
 
 
-
-            // Determine, which directional animation to load for character based on control knob state
-            if (pad.getKnobY() < pad.getHeight() * 0.5f) {
-
-                if (pad.getKnobX() >= pad.getWidth() * 0.6f) {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame = (TextureRegion) character.getAttackRight().getKeyFrame(stateTime,true);
-
-                    } else {
-                        CharacterCurrentFrame = (TextureRegion)character.getRightRun().getKeyFrame(stateTime, true);
-                    }
-                    character.setDirRight(true);
-
-
-                } else if (pad.getKnobX() <= pad.getWidth() * 0.4f) {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame = (TextureRegion)character.getAttackLeft().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame = (TextureRegion)character.getLeftRun().getKeyFrame(stateTime, true);
-                    }
-
-                    character.setDirLeft(true);
-
-                } else {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame =(TextureRegion) character.getAttackDown().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame = (TextureRegion)character.getDownRun().getKeyFrame(stateTime, true);
-                    }
-                    character.setDirDown(true);
-
-                }
-            }
-            if (pad.getKnobY() > pad.getHeight() * 0.5f) {
-
-                if (pad.getKnobX() >= pad.getWidth() * 0.6f) {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame =(TextureRegion) character.getAttackRight().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame = (TextureRegion)character.getRightRun().getKeyFrame(stateTime, true);
-                    }
-                    character.setDirRight(true);
-
-                } else if (pad.getKnobX() <= pad.getWidth() * 0.4f) {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame = (TextureRegion)character.getAttackLeft().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame = (TextureRegion)character.getLeftRun().getKeyFrame(stateTime, true);
-                    }
-                    character.setDirLeft(true);
-
-                } else {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame =(TextureRegion) character.getAttackUp().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame =(TextureRegion) character.getUpRun().getKeyFrame(stateTime, true);
-                    }
-                    character.setDirUp(true);
-
-                }
-            }
-
-
-
-
-
-
-
-
-            // get idle animations for character if not attacking. Else get attack animation
-            if (pad.getKnobX() == pad.getWidth() * 0.5f && pad.getKnobY() == pad.getHeight() * 0.5f) {
-                if (character.isDirUp()) {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame = (TextureRegion)character.getAttackUp().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame =(TextureRegion) character.getIdleUp().getKeyFrame(stateTime, true);
-
-                    }
-
-
-                }
-                if (character.isDirDown()) {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame =(TextureRegion)character.getAttackDown().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame = (TextureRegion)character.getIdleDown().getKeyFrame(stateTime, true);
-                    }
-
-
-                }
-                if (character.isDirRight()) {
-                    if (character.isAttacking()) {
-                        CharacterCurrentFrame =(TextureRegion) character.getAttackRight().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame = (TextureRegion)character.getIdleRight().getKeyFrame(stateTime, true);
-                    }
-
-
-                }
-                if (character.isDirLeft()) {
-                    if (character.isAttacking()) {
-
-                        CharacterCurrentFrame =(TextureRegion) character.getAttackLeft().getKeyFrame(stateTime, true);
-
-                    } else {
-                        CharacterCurrentFrame = (TextureRegion)character.getIdleLeft().getKeyFrame(stateTime, true);
-                    }
-
-
-                }
-            }
+            // Fetch proper animation frame for main character based on control knob state
+           character.fetchAnimation(pad,stateTime);
 // collisions between monsters (Rectangle ) and character
             for (int i = 0; i < currentLevelMonsters.size(); i++) {
                 Rectangle rect = currentLevelMonsters.get(i).getBounds();
@@ -1183,15 +1066,7 @@ resolveOverlaps(currentLevelMonsters);
             }
 
             // Render character animations and character hp
-            if (character.getHP() > 0) {
-                if (character.isHurt()) {
-                    game.batch.setColor(Color.RED);
-                } else {
-                    game.batch.setColor(Color.WHITE);
-                }
-                game.batch.draw(CharacterCurrentFrame, character.getX(), character.getY(), character.getWidth(), character.getHeight());
-                // drawText(character.getX() + 5, character.getY() + character.getHeight() + 5, 0.5f, "HP: " + (int) character.getHP(), game.batch, Color.RED);
-            }
+             character.draw(game.batch, stateTime);
 
 
             // Fetch proper animation for npc
@@ -1249,53 +1124,7 @@ resolveOverlaps(currentLevelMonsters);
 
                         // Render monsters
             for (int i = 0; i < currentLevelMonsters.size(); i++) {
-
-
-                if (currentLevelMonsters.get(i).isHurt()) {
-                    game.batch.setColor(Color.RED);
-                } else {
-                    game.batch.setColor(Color.WHITE);
-                }
-
-
-                if (currentLevelMonsters.get(i).isDirDown()) {
-                    if (currentLevelMonsters.get(i).isAttacking()) {
-                        game.batch.draw((TextureRegion) currentLevelMonsters.get(i).getAttackDown().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    } else {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getDownRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    }
-                } else if (currentLevelMonsters.get(i).isDirUp()) {
-                    if (currentLevelMonsters.get(i).isAttacking()) {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getAttackUp().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    } else {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getUpRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    }
-                } else if (currentLevelMonsters.get(i).isDirRight()) {
-                    if (currentLevelMonsters.get(i).isAttacking()) {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getAttackRight().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    } else {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getRightRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    }
-                } else if (currentLevelMonsters.get(i).isDirLeft()) {
-                    if (currentLevelMonsters.get(i).isAttacking()) {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getAttackLeft().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    } else {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getLeftRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    }
-
-                } else if (!currentLevelMonsters.get(i).isDirectionSet()) {
-                    game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getDownRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                }
-
+                currentLevelMonsters.get(i).draw(game.batch, stateTime);
             }
 
             // collisions between mapobjects and character

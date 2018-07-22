@@ -3,6 +3,7 @@ package com.mygdx.game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Rectangle;
 
 import java.util.HashMap;
@@ -11,7 +12,7 @@ import java.util.HashMap;
  * Created by Markus on 7.8.2017.
  */
 
-public class NPC extends Cinfo {
+public class NPC extends Cinfo implements Drawable {
     private Animation upRun;
     private Animation downRun;
     private Animation leftRun;
@@ -84,6 +85,10 @@ public class NPC extends Cinfo {
 
 
     }
+    public void draw(SpriteBatch batch, float stateTime){
+
+    }
+
 
     public float getTargX() {
         return targX;

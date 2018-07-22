@@ -1,8 +1,13 @@
 package com.mygdx.game;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.scenes.scene2d.Touchable;
+import com.badlogic.gdx.scenes.scene2d.ui.Touchpad;
 
 import java.util.ArrayList;
 
@@ -10,7 +15,7 @@ import java.util.ArrayList;
  * Created by Markus on 19.7.2017.
  */
 
-public class Character extends Cinfo {
+public class Character extends Cinfo implements Drawable{
 
 
     private float exp;
@@ -56,6 +61,7 @@ public class Character extends Cinfo {
 
     private ArrayList<Event> questlist;
     private ArrayList<Item> Inventory;
+    private TextureRegion currentFrame;
 
 
     /**
@@ -175,6 +181,149 @@ public enum locationStatus{
 
     public void addItem(Item item){
     Inventory.add(item);
+
+}
+public void draw(SpriteBatch batch, float Statetime){
+
+// Render character animations and character hp
+    if (getHP() > 0) {
+        if (isHurt()) {
+            batch.setColor(Color.RED);
+        } else {
+            batch.setColor(Color.WHITE);
+        }
+        batch.draw(currentFrame, getX(),getY(),getWidth(), getHeight());
+        // drawText(character.getX() + 5, character.getY() + character.getHeight() + 5, 0.5f, "HP: " + (int) character.getHP(), game.batch, Color.RED);
+    }
+}
+public void setCurrentFrame(TextureRegion frame){
+        currentFrame = frame;
+
+}
+
+public TextureRegion getCurrentFrame(){
+        return currentFrame;
+}
+
+public void fetchAnimation(Touchpad pad, float stateTime){
+    // Determine, which directional animation to load for character based on control knob state
+    if (pad.getKnobY() < pad.getHeight() * 0.5f) {
+
+        if (pad.getKnobX() >= pad.getWidth() * 0.6f) {
+            if (isAttacking()) {
+               currentFrame = (TextureRegion) getAttackRight().getKeyFrame(stateTime,true);
+
+            } else {
+                currentFrame = (TextureRegion)getRightRun().getKeyFrame(stateTime, true);
+            }
+            setDirRight(true);
+
+
+        } else if (pad.getKnobX() <= pad.getWidth() * 0.4f) {
+            if (isAttacking()) {
+                currentFrame = (TextureRegion)getAttackLeft().getKeyFrame(stateTime, true);
+
+            } else {
+                currentFrame = (TextureRegion)getLeftRun().getKeyFrame(stateTime, true);
+            }
+
+            setDirLeft(true);
+
+        } else {
+            if (isAttacking()) {
+                currentFrame =(TextureRegion) getAttackDown().getKeyFrame(stateTime, true);
+
+            } else {
+               currentFrame = (TextureRegion)getDownRun().getKeyFrame(stateTime, true);
+            }
+            setDirDown(true);
+
+        }
+    }
+    if (pad.getKnobY() > pad.getHeight() * 0.5f) {
+
+        if (pad.getKnobX() >= pad.getWidth() * 0.6f) {
+            if (isAttacking()) {
+                currentFrame =(TextureRegion) getAttackRight().getKeyFrame(stateTime, true);
+
+            } else {
+                currentFrame = (TextureRegion)getRightRun().getKeyFrame(stateTime, true);
+            }
+           setDirRight(true);
+
+        } else if (pad.getKnobX() <= pad.getWidth() * 0.4f) {
+            if (isAttacking()) {
+              currentFrame = (TextureRegion)getAttackLeft().getKeyFrame(stateTime, true);
+
+            } else {
+               currentFrame = (TextureRegion)getLeftRun().getKeyFrame(stateTime, true);
+            }
+            setDirLeft(true);
+
+        } else {
+            if (isAttacking()) {
+                currentFrame =(TextureRegion) getAttackUp().getKeyFrame(stateTime, true);
+
+            } else {
+               currentFrame =(TextureRegion) getUpRun().getKeyFrame(stateTime, true);
+            }
+            setDirUp(true);
+
+        }
+    }
+
+
+
+
+
+
+
+
+    // get idle animations for character if not attacking. Else get attack animation
+    if (pad.getKnobX() == pad.getWidth() * 0.5f && pad.getKnobY() == pad.getHeight() * 0.5f) {
+        if (isDirUp()) {
+            if (isAttacking()) {
+                currentFrame = (TextureRegion)getAttackUp().getKeyFrame(stateTime, true);
+
+            } else {
+                currentFrame =(TextureRegion) getIdleUp().getKeyFrame(stateTime, true);
+
+            }
+
+
+        }
+        if (isDirDown()) {
+            if (isAttacking()) {
+                currentFrame =(TextureRegion)getAttackDown().getKeyFrame(stateTime, true);
+
+            } else {
+                currentFrame = (TextureRegion)getIdleDown().getKeyFrame(stateTime, true);
+            }
+
+
+        }
+        if (isDirRight()) {
+            if (isAttacking()) {
+                currentFrame =(TextureRegion) getAttackRight().getKeyFrame(stateTime, true);
+
+            } else {
+                currentFrame = (TextureRegion)getIdleRight().getKeyFrame(stateTime, true);
+            }
+
+
+        }
+        if (isDirLeft()) {
+            if (isAttacking()) {
+
+                currentFrame =(TextureRegion)getAttackLeft().getKeyFrame(stateTime, true);
+
+            } else {
+                currentFrame = (TextureRegion)getIdleLeft().getKeyFrame(stateTime, true);
+            }
+
+
+        }
+    }
 
 }
 
