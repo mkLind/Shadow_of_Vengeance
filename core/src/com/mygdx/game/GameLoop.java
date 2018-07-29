@@ -1045,23 +1045,7 @@ resolveOverlaps(currentLevelMonsters);
             game.batch.setColor(Color.WHITE);
             if(!mapItems.isEmpty()){
                 for(int i = 0;i<mapItems.size();i++){
-                    if(!mapItems.get(i).isPlaying() && mapItems.get(i).getType().equals(Item.ItemType.INTERACTABLE)){
-
-                        game.batch.draw((TextureRegion) mapItems.get(i).getAnimation().getKeyFrame(mapItems.get(i).getAnimState(),false),mapItems.get(i).getX(),mapItems.get(i).getY(),mapItems.get(i).getWidth(),mapItems.get(i).getHeight());
-                    }
-                    else if(!(mapItems.get(i).getAnimState() ==4) && mapItems.get(i).getType().equals(Item.ItemType.INTERACTABLE) && mapItems.get(i).isPlaying() ){
-                        game.batch.draw((TextureRegion) mapItems.get(i).getAnimation().getKeyFrame(mapItems.get(i).getAnimState(),false),mapItems.get(i).getX(),mapItems.get(i).getY(),mapItems.get(i).getWidth(),mapItems.get(i).getHeight());
-                        mapItems.get(i).setAnimState(mapItems.get(i).getAnimState()+1);
-
-
-                    }else if((mapItems.get(i).getAnimState() ==4) && !mapItems.get(i).getSecundaryType().equals("") && mapItems.get(i).getType().equals(Item.ItemType.INTERACTABLE)){
-                        mapItems.get(i).setType(mapItems.get(i).getSecundaryType());
-                        mapItems.get(i).setAnimState(0);
-                        mapItems.get(i).setPlaying(false);
-
-                    }else {
-                        game.batch.draw(mapItems.get(i).getTexture(), mapItems.get(i).getX(), mapItems.get(i).getY(), mapItems.get(i).getWidth(), mapItems.get(i).getHeight());
-                    }
+                  mapItems.get(i).draw(game.batch,stateTime);
                 }
             }
 
@@ -1075,52 +1059,10 @@ resolveOverlaps(currentLevelMonsters);
                     // Tarkistukset kaikkiin muihin suuntiin
 
 
-
-                    if(npcList.get(i).getDirection().equals(NPC.dirStatus.DOWN)){
-                        if(npcList.get(i).isMoving()){
-                            game.batch.draw((TextureRegion) npcList.get(i).getDownRun().getKeyFrame(stateTime,true), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }else{
-                            game.batch.draw((TextureRegion) npcList.get(i).getIdleDown().getKeyFrame(stateTime,true), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }
-
-                    }
-                    if(npcList.get(i).getDirection().equals(NPC.dirStatus.UP)){
-                        if(npcList.get(i).isMoving()){
-                            game.batch.draw((TextureRegion) npcList.get(i).getUpRun().getKeyFrame(stateTime,true), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }else{
-                            game.batch.draw((TextureRegion) npcList.get(i).getIdleUp().getKeyFrame(stateTime,true), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }
-                    }
-                    if(npcList.get(i).getDirection().equals(NPC.dirStatus.LEFT)){
-                        if(npcList.get(i).isMoving()){
-                            game.batch.draw((TextureRegion) npcList.get(i).getLeftRun().getKeyFrame(stateTime,true), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }else{
-                            game.batch.draw((TextureRegion) npcList.get(i).getIdleLeft().getKeyFrame(stateTime,true), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }
-                    }
-                    if(npcList.get(i).getDirection().equals(NPC.dirStatus.RIGHT)){
-                        if(npcList.get(i).isMoving()){
-                            game.batch.draw((TextureRegion) npcList.get(i).getRightRun().getKeyFrame(stateTime,true), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }else{
-                            game.batch.draw((TextureRegion) npcList.get(i).getIdleRight().getKeyFrame(stateTime,true), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }
-                    }
-
-
+                    npcList.get(i).draw(game.batch, stateTime);
                 }
 
             }
-
-
-
 
                         // Render monsters
             for (int i = 0; i < currentLevelMonsters.size(); i++) {
@@ -1158,48 +1100,7 @@ resolveOverlaps(currentLevelMonsters);
 
 
 
-            if (character.isDirUp()) {
-                if (character.isAttacking()) {
-                    CharacterCurrentFrame = (TextureRegion)character.getAttackUp().getKeyFrame(stateTime, true);
-
-                } else {
-                    CharacterCurrentFrame =(TextureRegion) character.getIdleUp().getKeyFrame(stateTime, true);
-
-                }
-
-
-            }
-            if (character.isDirDown()) {
-                if (character.isAttacking()) {
-                    CharacterCurrentFrame =(TextureRegion)character.getAttackDown().getKeyFrame(stateTime, true);
-
-                } else {
-                    CharacterCurrentFrame = (TextureRegion)character.getIdleDown().getKeyFrame(stateTime, true);
-                }
-
-
-            }
-            if (character.isDirRight()) {
-                if (character.isAttacking()) {
-                    CharacterCurrentFrame =(TextureRegion) character.getAttackRight().getKeyFrame(stateTime, true);
-
-                } else {
-                    CharacterCurrentFrame = (TextureRegion)character.getIdleRight().getKeyFrame(stateTime, true);
-                }
-
-
-            }
-            if (character.isDirLeft()) {
-                if (character.isAttacking()) {
-
-                    CharacterCurrentFrame =(TextureRegion) character.getAttackLeft().getKeyFrame(stateTime, true);
-
-                } else {
-                    CharacterCurrentFrame = (TextureRegion)character.getIdleLeft().getKeyFrame(stateTime, true);
-                }
-
-
-            }
+           character.fetchAnimation(pad,stateTime);
 
             pad.setVisible(false);
 
@@ -1216,53 +1117,7 @@ resolveOverlaps(currentLevelMonsters);
 
             // Render monsters
             for (int i = 0; i < currentLevelMonsters.size(); i++) {
-
-
-                if (currentLevelMonsters.get(i).isHurt()) {
-                    game.batch.setColor(Color.RED);
-                } else {
-                    game.batch.setColor(Color.WHITE);
-                }
-
-
-                if (currentLevelMonsters.get(i).isDirDown()) {
-                    if (currentLevelMonsters.get(i).isAttacking()) {
-                        game.batch.draw((TextureRegion) currentLevelMonsters.get(i).getAttackDown().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    } else {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getDownRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    }
-                } else if (currentLevelMonsters.get(i).isDirUp()) {
-                    if (currentLevelMonsters.get(i).isAttacking()) {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getAttackUp().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    } else {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getUpRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    }
-                } else if (currentLevelMonsters.get(i).isDirRight()) {
-                    if (currentLevelMonsters.get(i).isAttacking()) {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getAttackRight().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    } else {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getRightRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    }
-                } else if (currentLevelMonsters.get(i).isDirLeft()) {
-                    if (currentLevelMonsters.get(i).isAttacking()) {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getAttackLeft().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    } else {
-                        game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getLeftRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                    }
-
-                } else if (!currentLevelMonsters.get(i).isDirectionSet()) {
-                    game.batch.draw((TextureRegion)currentLevelMonsters.get(i).getDownRun().getKeyFrame(stateTime, true), currentLevelMonsters.get(i).getX(), currentLevelMonsters.get(i).getY(), currentLevelMonsters.get(i).getWidth(), currentLevelMonsters.get(i).getHeight());
-
-                }
-
+                currentLevelMonsters.get(i).draw(game.batch, stateTime);
             }
 
             // collisions between mapobjects and character
@@ -1270,19 +1125,11 @@ resolveOverlaps(currentLevelMonsters);
             // Draw map items.
             if(!mapItems.isEmpty()){
                 for(int i = 0;i<mapItems.size();i++){
-                    game.batch.draw(mapItems.get(i).getTexture(),mapItems.get(i).getX(),mapItems.get(i).getY(),mapItems.get(i).getWidth(),mapItems.get(i).getHeight());
+                    mapItems.get(i).draw(game.batch, stateTime);
                 }
             }
             // Render character animations and character hp
-            if (character.getHP() > 0) {
-                if (character.isHurt()) {
-                    game.batch.setColor(Color.RED);
-                } else {
-                    game.batch.setColor(Color.WHITE);
-                }
-                game.batch.draw(CharacterCurrentFrame, character.getX(), character.getY(), character.getWidth(), character.getHeight());
-                // drawText(character.getX() + 5, character.getY() + character.getHeight() + 5, 0.5f, "HP: " + (int) character.getHP(), game.batch, Color.RED);
-            }
+             character.draw(game.batch, stateTime);
             // Fetch proper animation for npc
 
 
@@ -1290,44 +1137,7 @@ resolveOverlaps(currentLevelMonsters);
 
             if(!npcList.isEmpty()){
                 for(int i = 0; i<npcList.size();i++) {
-                    // Tarkistukset kaikkiin muihin suuntiin
-                    if(npcList.get(i).getDirection().equals(NPC.dirStatus.DOWN)){
-                        if(npcList.get(i).isMoving()){
-                            game.batch.draw((TextureRegion) npcList.get(i).getDownRun().getKeyFrame(stateTime,false), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }else{
-                            game.batch.draw((TextureRegion) npcList.get(i).getIdleDown().getKeyFrame(stateTime,false), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }
-
-                    }
-                    if(npcList.get(i).getDirection().equals(NPC.dirStatus.UP)){
-                        if(npcList.get(i).isMoving()){
-                            game.batch.draw((TextureRegion) npcList.get(i).getUpRun().getKeyFrame(stateTime,false), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }else{
-                            game.batch.draw((TextureRegion) npcList.get(i).getIdleUp().getKeyFrame(stateTime,false), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }
-                    }
-                    if(npcList.get(i).getDirection().equals(NPC.dirStatus.LEFT)){
-                        if(npcList.get(i).isMoving()){
-                            game.batch.draw((TextureRegion) npcList.get(i).getLeftRun().getKeyFrame(stateTime,false), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }else{
-                            game.batch.draw((TextureRegion) npcList.get(i).getIdleLeft().getKeyFrame(stateTime,false), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }
-                    }
-                    if(npcList.get(i).getDirection().equals(NPC.dirStatus.RIGHT)){
-                        if(npcList.get(i).isMoving()){
-                            game.batch.draw((TextureRegion) npcList.get(i).getRightRun().getKeyFrame(stateTime,false), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }else{
-                            game.batch.draw((TextureRegion) npcList.get(i).getIdleRight().getKeyFrame(stateTime,false), npcList.get(i).getX()
-                                    ,npcList.get(i).getY(),npcList.get(i).getWidth(),npcList.get(i).getHeight());
-                        }
-                    }
+                  npcList.get(i).draw(game.batch,stateTime);
 
 
                 }

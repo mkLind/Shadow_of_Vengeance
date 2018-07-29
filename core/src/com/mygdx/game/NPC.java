@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 
 import java.util.HashMap;
@@ -86,6 +87,45 @@ public class NPC extends Cinfo implements Drawable {
 
     }
     public void draw(SpriteBatch batch, float stateTime){
+
+        if(getDirection().equals(NPC.dirStatus.DOWN)){
+            if(isMoving()){
+                batch.draw((TextureRegion) getDownRun().getKeyFrame(stateTime,true), getX()
+                        ,getY(),getWidth(),getHeight());
+            }else{
+                batch.draw((TextureRegion) getIdleDown().getKeyFrame(stateTime,true), getX()
+                        ,getY(),getWidth(),getHeight());
+            }
+
+        }
+        if(getDirection().equals(NPC.dirStatus.UP)){
+            if(isMoving()){
+                batch.draw((TextureRegion) getUpRun().getKeyFrame(stateTime,true), getX()
+                        ,getY(),getWidth(),getHeight());
+            }else{
+               batch.draw((TextureRegion) getIdleUp().getKeyFrame(stateTime,true), getX()
+                        ,getY(),getWidth(),getHeight());
+            }
+        }
+        if(getDirection().equals(NPC.dirStatus.LEFT)){
+            if(isMoving()){
+                batch.draw((TextureRegion) getLeftRun().getKeyFrame(stateTime,true), getX()
+                        ,getY(),getWidth(),getHeight());
+            }else{
+                batch.draw((TextureRegion) getIdleLeft().getKeyFrame(stateTime,true), getX()
+                        ,getY(),getWidth(),getHeight());
+            }
+        }
+        if(getDirection().equals(NPC.dirStatus.RIGHT)){
+            if(isMoving()){
+                batch.draw((TextureRegion) getRightRun().getKeyFrame(stateTime,true), getX()
+                        ,getY(),getWidth(),getHeight());
+            }else{
+                batch.draw((TextureRegion) getIdleRight().getKeyFrame(stateTime,true), getX()
+                        ,getY(),getWidth(),getHeight());
+            }
+        }
+
 
     }
 

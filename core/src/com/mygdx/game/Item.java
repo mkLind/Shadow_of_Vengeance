@@ -4,13 +4,15 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.ParticleEffect;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
 
 /**
  * Created by Markus on 4.8.2017.
  */
 
-public class Item {
+public class Item implements Drawable{
 
     /**
      * Class for representing onjects that the character can interact with, for example powerups and powerdowns.
@@ -131,7 +133,25 @@ public class Item {
         public enum ItemType {
           HAZARD,COLLECTIBLE, INTERACTABLE, PUSHABLE, SOLID, DOOR
         }
+    public void draw(SpriteBatch batch, float stateTime){
+        if(!isPlaying() && getType().equals(Item.ItemType.INTERACTABLE)){
 
+            batch.draw((TextureRegion) getAnimation().getKeyFrame(getAnimState(),false),getX(),getY(),getWidth(),getHeight());
+        }
+        else if(!(getAnimState() ==4) && getType().equals(Item.ItemType.INTERACTABLE) && isPlaying() ){
+            batch.draw((TextureRegion) getAnimation().getKeyFrame(getAnimState(),false),getX(),getY(),getWidth(),getHeight());
+            setAnimState(getAnimState()+1);
+
+
+        }else if((getAnimState() ==4) && !getSecundaryType().equals("") && getType().equals(Item.ItemType.INTERACTABLE)){
+            setType(getSecundaryType());
+            setAnimState(0);
+            setPlaying(false);
+
+        }else {
+            batch.draw(getTexture(), getX(),getY(), getWidth(), getHeight());
+        }
+    }
     public float getMoneyChange() {
         return moneyChange;
     }
